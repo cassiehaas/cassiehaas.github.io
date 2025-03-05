@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: #532e00;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 5%;
+}
+
+#getVal {
+    text-align: center;
+    margin-top: 10px; 
+}
+
+audio {
+    margin-bottom:10%;
+    margin-right:30%;
+    margin-left:30%;
+}
+
+button {
+    padding: 20px;      /* Style the button */
+    background-color: #780a0a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
