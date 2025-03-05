@@ -7,3 +7,7 @@ function getValue() {
     input = ("You entered: " + inputValue);
     document.getElementById("output").innerHTML = `${input}`;
   }
+
+function metro() {
+    
+}
