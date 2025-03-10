@@ -2,13 +2,21 @@
     <title>
         The Mourning Hour
     </title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="intro.css" title="style">
 </head> 
 
-<audio controls autoplay>
+<audio controls autoplay lower-suspicion>
     <source src="audio/intro/GiveYourName.mp3" type="audio/mp3">
 </audio>
 
 <p><a href = "no_sympathy.html">"He had a wife and kids."</a></p>
 
 <p><a href = "remorse.html">"He's killed so many."</a></p>
+
+<div id="suspicionContainer">
+    <div id="progressContainer">
+        <div id="suspicionBar"></div>
+    </div>
+    <p id="suspicionDisplay">Suspicion Level: 0</p>
+</div>
