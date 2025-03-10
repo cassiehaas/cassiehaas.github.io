@@ -1,0 +1,109 @@
+@font-face {
+	font-family: Nicholas;
+	src: url(Fonts/Shinntype/Nicholas/OTF/Nicholas_Regular.otf);
+}
+
+@font-face {
+	font-family: Nicholas;
+	src: url(Fonts/Shinntype/Nicholas/OTF/Nicholas_Bold.otf);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Nicholas;
+	src: url(Fonts/Shinntype/Nicholas/OTF/Nicholas_Bold.otf);
+	font-weight: 500;
+}
+
+* {
+  font-family: Nicholas, serif;
+}
+
+body {
+	max-width: 33em;
+	margin: auto;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+
+picture {
+	margin-right: 0.3em;
+	display: inline-block;
+}
+img {
+	height: 100%;
+	max-height: 30em;
+	margin: auto;
+}
+svg {
+	display: inline-block;
+	vertical-align: bottom;
+	height: 1.5em;
+	width: 1.5em;
+}
+h1 {
+	margin: 0;
+}
+
+.slideshow {
+	margin-bottom: 5em;
+}
+
+.pair .flickity-viewport {
+	height: 100%;
+	padding-top:100%; /* dude idek why this works but without it it doesn't have any height - https://github.com/metafizzy/flickity/issues/559#issuecomment-450257198 */
+}
+
+.pair .flickity-slider{
+	margin-top:-100%; /* see above - https://github.com/metafizzy/flickity/issues/559#issuecomment-450257198 */
+}
+
+.pair {
+	display: block;
+	margin-bottom: 2em;
+}
+
+.pair > * {
+	vertical-align: top;
+}
+
+
+#marketing {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+#name-contact {
+	display: none; /* don't show on mobile view */
+}
+
+#name-contact * {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+@media (width >= 750px) { /* tablet style */
+}
+@media (width >= 1000px) { /* desktop style */
+	#name-contact {
+		display: block; 
+	}
+	body {
+		max-width: 66em;
+	}
+	.first {
+		width: 44%; /* start with 49% because if they add up to 100% it'll overflow, 49% - 5% margin = 44% */
+		height: 100%;
+		margin-right: 5%;
+		display: inline-block;
+	}
+	.second {
+		width: 50%;
+		height: 100%;
+		display: inline-block;
+	}
+}
