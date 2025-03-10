@@ -2,13 +2,21 @@
     <title>
         The Mourning Hour
     </title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="intro.css" title="style">
 </head> 
 
-<audio controls autoplay>
+<audio controls autoplay raise-suspicion>
     <source src="audio/intro/HaveNoSympathy.mp3" type="audio/mp3">
 </audio>
 
 <p><a href="play_dumb.html">"Who really knows what happened?"</a></p>
 
 <p><a href="more_info.html">"I know some things."</a></p>
+
+<div id="suspicionContainer">
+    <div id="progressContainer">
+        <div id="suspicionBar"></div>
+    </div>
+    <p id="suspicionDisplay">Suspicion Level: 0</p>
+</div>
