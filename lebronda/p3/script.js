@@ -64,24 +64,33 @@ function adjustSuspicion(amount) {
     let suspicionLevel = getSuspicion();
 
     // Get all audio elements
-    let raise = document.querySelectorAll("audio[raise-suspicion]");
+    // Get all audio elements
+    let raiseAudios = document.querySelectorAll("audio[raise-suspicion]");
     let reset = document.querySelector("[reset-suspicion]");
-    let lower = document.querySelectorAll("audio[lower-suspicion]");
+    let lowerAudios = document.querySelectorAll("audio[lower-suspicion]");
 
     // Reset suspicion if needed
     if (reset) {
-      localStorage.setItem("Suspicion", 1)
+        localStorage.setItem("Suspicion", 1);
     }
-  
-    if (raise) {
-        adjustSuspicion(1); // Increase suspicion only if the <audio> tag has the attribute
-    }
-  
-    if (lower) {
-      adjustSuspicion(-1)
-    }
-    // Only play audios that have a valid data-threshold
-    raise.forEach(audio => {
+
+    // Adjust suspicion only if the conditions are met
+    raiseAudios.forEach(audio => {
+        let threshold = audio.hasAttribute("data-threshold") ? parseInt(audio.getAttribute("data-threshold")) : null;
+        if (threshold !== null && suspicionLevel < threshold) {
+            adjustSuspicion(1);
+        }
+    });
+
+    lowerAudios.forEach(audio => {
+        let maxThreshold = audio.hasAttribute("data-max-threshold") ? parseInt(audio.getAttribute("data-max-threshold")) : null;
+        if (maxThreshold !== null && suspicionLevel >= maxThreshold) {
+            adjustSuspicion(-1);
+        }
+    });
+
+    // Only play audios that match their conditions
+    raiseAudios.forEach(audio => {
         let threshold = audio.hasAttribute("data-threshold") ? parseInt(audio.getAttribute("data-threshold")) : null;
         if (threshold !== null && suspicionLevel >= threshold) {
             audio.play();
@@ -91,7 +100,7 @@ function adjustSuspicion(amount) {
         }
     });
 
-    lower.forEach(audio => {
+    lowerAudios.forEach(audio => {
         let maxThreshold = audio.hasAttribute("data-max-threshold") ? parseInt(audio.getAttribute("data-max-threshold")) : null;
         if (maxThreshold !== null && suspicionLevel < maxThreshold) {
             audio.play();
