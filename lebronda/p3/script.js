@@ -63,7 +63,7 @@ function adjustSuspicion(amount) {
   document.addEventListener("DOMContentLoaded", function() {
     // Check if an <audio> element with the attribute data-raise-suspicion exists
     let raise = document.querySelector("audio[raise-suspicion]");
-    let reset = document.querySelector("audio[reset-suspicion]")
+    let reset = document.querySelector("[reset-suspicion]")
     let lower = document.querySelector("audio[lower-suspicion]")
   
     if (reset) {
