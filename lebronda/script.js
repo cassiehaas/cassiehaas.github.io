@@ -60,54 +60,57 @@ function updatePage() {
 }
 
 // Run updatePage when the page loads
-document.addEventListener("DOMContentLoaded", function() {
-  let suspicionLevel = getSuspicion();
+document.addEventListener("DOMContentLoaded", function () {
+  let suspicionLevel = getSuspicion(); // Get suspicion before making changes
 
   // Get all audio elements
-  let raiseAudios = document.querySelectorAll("audio[raise-suspicion]");
+  let raise = document.querySelectorAll("audio[raise-suspicion]");
   let reset = document.querySelector("[reset-suspicion]");
-  let lowerAudios = document.querySelectorAll("audio[lower-suspicion]");
+  let lower = document.querySelectorAll("audio[lower-suspicion]");
 
   // Reset suspicion if needed
   if (reset) {
       localStorage.setItem("Suspicion", 1);
   }
 
-  // Adjust suspicion only if the conditions are met
-  raiseAudios.forEach(audio => {
-      let threshold = audio.hasAttribute("data-threshold") ? parseInt(audio.getAttribute("data-threshold")) : null;
-      if (threshold !== null && suspicionLevel < threshold) {
-          adjustSuspicion(1);
+  // Adjust suspicion based on the number of raise/lower elements
+  raise.forEach(() => adjustSuspicion(1));
+  lower.forEach(() => adjustSuspicion(-1));
+
+  // Get updated suspicion level after changes
+  suspicionLevel = getSuspicion(); 
+
+  // Debugging: Log the updated suspicion level
+  console.log(`Updated Suspicion Level: ${suspicionLevel}`);
+
+  // Control audio playback based on suspicion level
+  let audioElements = document.querySelectorAll("audio");
+
+  audioElements.forEach(audio => {
+      if (audio.hasAttribute("data-threshold")) {
+          let threshold = parseInt(audio.getAttribute("data-threshold"));
+          console.log(`Audio found with threshold: ${threshold} - Source: ${audio.src}`);
+
+          if (suspicionLevel >= threshold) {
+              audio.play();
+          } else {
+              audio.pause();
+              audio.currentTime = 0;
+          }
+      }
+
+      if (audio.hasAttribute("data-max-threshold")) {
+          let maxThreshold = parseInt(audio.getAttribute("data-max-threshold"));
+          console.log(`Audio found with max threshold: ${maxThreshold} - Source: ${audio.src}`);
+
+          if (suspicionLevel < maxThreshold) {
+              audio.play();
+          } else {
+              audio.pause();
+              audio.currentTime = 0;
+          }
       }
   });
 
-  lowerAudios.forEach(audio => {
-      let maxThreshold = audio.hasAttribute("data-max-threshold") ? parseInt(audio.getAttribute("data-max-threshold")) : null;
-      if (maxThreshold !== null && suspicionLevel >= maxThreshold) {
-          adjustSuspicion(-1);
-      }
-  });
-
-  // Only play audios that match their conditions
-  raiseAudios.forEach(audio => {
-      let threshold = audio.hasAttribute("data-threshold") ? parseInt(audio.getAttribute("data-threshold")) : null;
-      if (threshold !== null && suspicionLevel >= threshold) {
-          audio.play();
-      } else {
-          audio.pause();
-          audio.currentTime = 0; // Reset playback
-      }
-  });
-
-  lowerAudios.forEach(audio => {
-      let maxThreshold = audio.hasAttribute("data-max-threshold") ? parseInt(audio.getAttribute("data-max-threshold")) : null;
-      if (maxThreshold !== null && suspicionLevel < maxThreshold) {
-          audio.play();
-      } else {
-          audio.pause();
-          audio.currentTime = 0; // Reset playback
-      }
-  });
-
-  updatePage();
+  updatePage();  // Now correctly updates suspicion after adjustments
 });
