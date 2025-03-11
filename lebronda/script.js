@@ -5,7 +5,7 @@ function adjustSuspicion(amount) {
   
   // Keep suspicion level within bounds (optional: adjust as needed)
   if (newSuspicion < 0) newSuspicion = 0;
-  if (newSuspicion > 7) newSuspicion = 7; // Max suspicion cap
+  if (newSuspicion > 6) newSuspicion = 6; // Max suspicion cap
 
   localStorage.setItem("Suspicion", newSuspicion);
 }
@@ -18,22 +18,28 @@ function getSuspicion() {
 // Function to update the page based on Suspicion level
 function updatePage() {
   let suspicionLevel = getSuspicion();
+
+  // Loss condition
+  if (suspicionLevel >= 6) {
+    window.location.href = "https://cassiehaas.github.io/lebronda/thisisloss.html";
+    return; 
+  }
     
   // Update text display
   document.getElementById("suspicionDisplay").innerText = "Suspicion Level: " + suspicionLevel;
   
   // Update progress bar
   let progressBar = document.getElementById("suspicionBar");
-  let progressPercentage = (suspicionLevel / 7) * 100; // Convert to percentage
+  let progressPercentage = (suspicionLevel / 6) * 100; // Convert to percentage
   progressBar.style.width = progressPercentage + "%";
 
   // Remove old color classes
   progressBar.classList.remove("low", "medium", "high");
 
   // Apply new color class based on suspicion level
-  if (suspicionLevel <= 3) {
+  if (suspicionLevel <= 2) {
       progressBar.classList.add("low");  // Green for low suspicion
-  } else if (suspicionLevel <= 5) {
+  } else if (suspicionLevel <= 4) {
       progressBar.classList.add("medium"); // Yellow for medium suspicion
   } else {
       progressBar.classList.add("high"); // Red for high suspicion
