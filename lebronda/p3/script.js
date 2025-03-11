@@ -61,11 +61,14 @@ function adjustSuspicion(amount) {
   
   // Run updatePage when the page loads
   document.addEventListener("DOMContentLoaded", function() {
-    // Check if an <audio> element with the attribute data-raise-suspicion exists
-    let raise = document.querySelector("audio[raise-suspicion]");
-    let reset = document.querySelector("[reset-suspicion]")
-    let lower = document.querySelector("audio[lower-suspicion]")
-  
+    let suspicionLevel = getSuspicion();
+
+    // Get all audio elements
+    let raise = document.querySelectorAll("audio[raise-suspicion]");
+    let reset = document.querySelector("[reset-suspicion]");
+    let lower = document.querySelectorAll("audio[lower-suspicion]");
+
+    // Reset suspicion if needed
     if (reset) {
       localStorage.setItem("Suspicion", 1)
     }
@@ -77,6 +80,26 @@ function adjustSuspicion(amount) {
     if (lower) {
       adjustSuspicion(-1)
     }
-  
+    // Only play audios that have a valid data-threshold
+    raise.forEach(audio => {
+        let threshold = audio.hasAttribute("data-threshold") ? parseInt(audio.getAttribute("data-threshold")) : null;
+        if (threshold !== null && suspicionLevel >= threshold) {
+            audio.play();
+        } else {
+            audio.pause();
+            audio.currentTime = 0; // Reset playback
+        }
+    });
+
+    lower.forEach(audio => {
+        let maxThreshold = audio.hasAttribute("data-max-threshold") ? parseInt(audio.getAttribute("data-max-threshold")) : null;
+        if (maxThreshold !== null && suspicionLevel < maxThreshold) {
+            audio.play();
+        } else {
+            audio.pause();
+            audio.currentTime = 0; // Reset playback
+        }
+    });
+
     updatePage();
   });

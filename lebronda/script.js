@@ -78,5 +78,25 @@ document.addEventListener("DOMContentLoaded", function() {
     adjustSuspicion(-1)
   }
 
-  updatePage();
+  raise.forEach(audio => {
+    let threshold = audio.hasAttribute("data-threshold") ? parseInt(audio.getAttribute("data-threshold")) : null;
+    if (threshold !== null && suspicionLevel >= threshold) {
+        audio.play();
+    } else {
+        audio.pause();
+        audio.currentTime = 0; // Reset playback
+    }
+});
+
+lower.forEach(audio => {
+    let maxThreshold = audio.hasAttribute("data-max-threshold") ? parseInt(audio.getAttribute("data-max-threshold")) : null;
+    if (maxThreshold !== null && suspicionLevel < maxThreshold) {
+        audio.play();
+    } else {
+        audio.pause();
+        audio.currentTime = 0; // Reset playback
+    }
+});
+
+updatePage();
 });
