@@ -7,7 +7,7 @@ import os
 import pillow_avif # pillow-avif-plugin for AVIF files
 
 # Define base directory
-directory = "Promotional"
+directory = "Misc"
 base_dir = os.path.abspath(directory)  # Makes paths absolute
 
 # Define subdirectories
@@ -30,7 +30,7 @@ for filename in os.listdir(input_dir):
 
     image = Image.open(input_path)
     origsize = image.size
-    newsize = (origsize[0] // 4, origsize[1] // 4)
+    newsize = (origsize[0] // 2, origsize[1] // 2)
     
     newimage = image.resize(newsize)
     newimage.save(output_path)
