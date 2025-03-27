@@ -54,11 +54,11 @@ h1 {
 
 .pair .flickity-viewport {
 	height: 100%;
-	padding-top:100%; /* dude idek why this works but without it it doesn't have any height - https://github.com/metafizzy/flickity/issues/559#issuecomment-450257198 */
+	padding-top:100%; 
 }
 
 .pair .flickity-slider{
-	margin-top:-100%; /* see above - https://github.com/metafizzy/flickity/issues/559#issuecomment-450257198 */
+	margin-top:-100%;
 }
 
 .pair {
