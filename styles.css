@@ -95,14 +95,25 @@ h1 {
 	body {
 		max-width: 66em;
 	}
-	.first {
-		width: 44%; /* start with 49% because if they add up to 100% it'll overflow, 49% - 5% margin = 44% */
+	.first-right {
+		width: 67%; /* start with 49% because if they add up to 100% it'll overflow, 49% - 5% margin = 44% */
 		height: 100%;
 		margin-right: 5%;
 		display: inline-block;
 	}
-	.second {
-		width: 50%;
+	.second-right {
+		width: 25%;
+		height: 100%;
+		display: inline-block;
+	}
+	.first-left {
+		width: 25%;
+		height: 100%;
+		margin-right: 5%;
+		display: inline-block;
+	}
+	.second-left {
+		width: 67%;
 		height: 100%;
 		display: inline-block;
 	}
