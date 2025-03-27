@@ -22,6 +22,8 @@
 body {
 	max-width: 33em;
 	margin: auto;
+	background-color: #f4f1eb; /* warm off-white */
+	color: #2e2e2e; /* soft charcoal for text */
 }
 
 p {
@@ -31,12 +33,33 @@ p {
 
 picture {
 	margin-right: 0.3em;
+	margin-bottom: 0.1em;
 	display: inline-block;
 }
+
+.picture-box {
+  border: 3px solid black;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  padding: 0.5em;
+  background-color: #fff; /* optional contrast */
+  height: 100%;
+}
+
+.picture-box picture,
+.picture-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 img {
 	height: 100%;
 	max-height: 30em;
 	margin: auto;
+	border-radius: 0.5em;
+	object-fit: cover;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 svg {
 	display: inline-block;
@@ -46,19 +69,58 @@ svg {
 }
 h1 {
 	margin: 0;
+	color: #5b3e2b;
 }
 
-.slideshow {
-	margin-bottom: 5em;
+.section-divider {
+	height: 2px;
+	width: 66%;
+	background-color: black;
+	margin: 2em auto; /* centers it and adds spacing */
+  }
+
+
+.slideshow picture,
+.slideshow picture img {
+  display: block;
 }
 
 .pair .flickity-viewport {
-	height: 100%;
-	padding-top:100%; 
+	height: auto;
+	padding-top: 0;
+	max-height: 30em; 
+	width: auto;
+}
+.pair .flickity-slider {
+	margin-top: 0;
+	display: flex;
 }
 
-.pair .flickity-slider{
-	margin-top:-100%;
+.pair .flickity-page-dots {
+	display: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 0 !important;
+}
+
+.pair .flickity-slider picture img, .flickity-slider picture img {
+	border-radius: 0.5em;
+	object-fit: cover;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.pair {
+	background-color: #faf8f3;
+	padding: 1.5em;
+	border-radius: 0.5em;
+  }
+
+.slideshow,
+.theater-slides,
+#dance-slides {
+  border: 3px solid black;
+  border-radius: 0.5em; /* optional: softens corners */
+  box-sizing: border-box; /* makes sure border doesn’t affect layout size */
 }
 
 .pair {
@@ -118,3 +180,26 @@ h1 {
 		display: inline-block;
 	}
 }
+
+.section-box {
+	background-color: #faf8f3; /* soft warm background */
+	padding: 2em;
+	border-radius: 0.75em;
+	margin-bottom: 2em;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* optional softness */
+  }
+  
+  #marketing-pictures {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+	margin-top: 1em;
+  }
+  
+  #marketing-pictures picture img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 0.5em;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }

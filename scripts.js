@@ -1,29 +1,36 @@
-let main_flkty = new Flickity('.slideshow', {
-  // options
-  cellAlign: 'left',
-  contain: true,
-  wrapAround: true,
-  autoPlay: 3000
+document.querySelectorAll('.slideshow').forEach(el => {
+  new Flickity(el, {
+    cellAlign: 'center',
+    contain: true,
+    wrapAround: true,
+    autoPlay: 3000,
+    prevNextButtons: true, // make sure this is set
+    pageDots: false,
+    imagesLoaded: true,
+    freeScroll: true,
+  });
 });
 
 let theater_flkty = new Flickity('.theater-slides', {
   // options
-  cellAlign: 'left',
+  cellAlign: 'center',
   contain: true,
   wrapAround: true,
-  prevNextButtons: false,
-  setGallerySize: false,
-  autoPlay: 3000
+  autoPlay: 3000,
+  pageDots: false,
+  imagesLoaded: true,
+  freeScroll: true,
 });
 
 let dance_flkty = new Flickity('#dance-slides', {
   // options
-  cellAlign: 'left',
+  cellAlign: 'center',
   contain: true,
   wrapAround: true,
-  prevNextButtons: false,
-  setGallerySize: false,
-  autoPlay: 3000
+  autoPlay: 3000,
+  pageDots: false,
+  imagesLoaded: true,
+  freeScroll: true,
 });
 
 /* Swap theater elements if in mobile view. */
