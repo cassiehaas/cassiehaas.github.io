@@ -52,6 +52,37 @@ picture {
   display: block;
 }
 
+.gallery-nav {
+	position: sticky;
+	top: 0;
+	background-color: #f4f1eb;
+	padding: 1em;
+	z-index: 10;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+.top-nav {
+display: flex;
+justify-content: center;
+gap: 2em;
+margin-bottom: 2em;
+margin-top: 2em;
+}
+
+.top-nav a {
+text-decoration: none;
+color: #5b3e2b;
+font-weight: bold;
+}
+
+.top-nav a:hover {
+color: #a1674a;
+}
+
+.paper {
+	margin-top: 20px;
+}
+
 img {
 	height: 100%;
 	max-height: 30em;
@@ -67,7 +98,7 @@ svg {
 	width: 1.5em;
 }
 h1 {
-	margin: 0;
+	margin: 5;
 	color: #5b3e2b;
 }
 

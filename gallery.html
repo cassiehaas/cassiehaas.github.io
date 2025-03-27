@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Gallery — Cassandra Haas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #f4f1eb;
+      color: #2e2e2e;
+      font-family: Nicholas, serif;
+      max-width: none;
+      padding: 2em;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-bottom: 2em;
+    }
+
+    .top-nav a {
+      text-decoration: none;
+      color: #5b3e2b;
+      font-weight: bold;
+    }
+
+    .top-nav a:hover {
+      color: #a1674a;
+    }
+
+    h1 {
+      text-align: center;
+      color: #5b3e2b;
+      margin-bottom: 1em;
+    }
+
+    h2 {
+      color: #7a5747;
+      margin-top: 2em;
+      border-bottom: 1px solid #d4cfc4;
+      padding-bottom: 0.3em;
+      font-size: 1.5em;
+    }
+
+    .gallery-nav {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    .gallery-nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #7a5747;
+      font-weight: bold;
+    }
+
+    .gallery-nav a:hover {
+      color: #a1674a;
+      text-decoration: underline;
+    }
+
+    .gallery-section {
+      margin-bottom: 3em;
+    }
+
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+      margin-top: 1em;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery-grid picture {
+      flex: 1 1 200px; /* smaller image size */
+      max-width: 100%;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0.5em;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="projects.html">Projects</a>
+  </div>
+
+  <h1>Photo Gallery</h1>
+
+<div class="gallery-nav">
+<a href="#dance">Dance</a>
+<a href="#theater">Theater</a>
+<a href="#misc">Misc</a>
+<a href="#promotional">Promotional</a>
+</div>
+<div class="gallery-section" id="dance">
+<h2>Dance</h2>
+<div class="gallery-grid">
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-58.avif">
+          <source srcset="./Photos/Dance/webps/dance-58.webp">
+          <img src="./Photos/Dance/jpgs/dance-58.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-56.avif">
+          <source srcset="./Photos/Dance/webps/dance-56.webp">
+          <img src="./Photos/Dance/jpgs/dance-56.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-46.avif">
+          <source srcset="./Photos/Dance/webps/dance-46.webp">
+          <img src="./Photos/Dance/jpgs/dance-46.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-48.avif">
+          <source srcset="./Photos/Dance/webps/dance-48.webp">
+          <img src="./Photos/Dance/jpgs/dance-48.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-01.avif">
+          <source srcset="./Photos/Dance/webps/dance-01.webp">
+          <img src="./Photos/Dance/jpgs/dance-01.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-53.avif">
+          <source srcset="./Photos/Dance/webps/dance-53.webp">
+          <img src="./Photos/Dance/jpgs/dance-53.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-16.avif">
+          <source srcset="./Photos/Dance/webps/dance-16.webp">
+          <img src="./Photos/Dance/jpgs/dance-16.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-25.avif">
+          <source srcset="./Photos/Dance/webps/dance-25.webp">
+          <img src="./Photos/Dance/jpgs/dance-25.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-62.avif">
+          <source srcset="./Photos/Dance/webps/dance-62.webp">
+          <img src="./Photos/Dance/jpgs/dance-62.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-51.avif">
+          <source srcset="./Photos/Dance/webps/dance-51.webp">
+          <img src="./Photos/Dance/jpgs/dance-51.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-23.avif">
+          <source srcset="./Photos/Dance/webps/dance-23.webp">
+          <img src="./Photos/Dance/jpgs/dance-23.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-40.avif">
+          <source srcset="./Photos/Dance/webps/dance-40.webp">
+          <img src="./Photos/Dance/jpgs/dance-40.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-38.avif">
+          <source srcset="./Photos/Dance/webps/dance-38.webp">
+          <img src="./Photos/Dance/jpgs/dance-38.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-28.avif">
+          <source srcset="./Photos/Dance/webps/dance-28.webp">
+          <img src="./Photos/Dance/jpgs/dance-28.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-50.avif">
+          <source srcset="./Photos/Dance/webps/dance-50.webp">
+          <img src="./Photos/Dance/jpgs/dance-50.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-24.avif">
+          <source srcset="./Photos/Dance/webps/dance-24.webp">
+          <img src="./Photos/Dance/jpgs/dance-24.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-07.avif">
+          <source srcset="./Photos/Dance/webps/dance-07.webp">
+          <img src="./Photos/Dance/jpgs/dance-07.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-14.avif">
+          <source srcset="./Photos/Dance/webps/dance-14.webp">
+          <img src="./Photos/Dance/jpgs/dance-14.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-47.avif">
+          <source srcset="./Photos/Dance/webps/dance-47.webp">
+          <img src="./Photos/Dance/jpgs/dance-47.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-11.avif">
+          <source srcset="./Photos/Dance/webps/dance-11.webp">
+          <img src="./Photos/Dance/jpgs/dance-11.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-09.avif">
+          <source srcset="./Photos/Dance/webps/dance-09.webp">
+          <img src="./Photos/Dance/jpgs/dance-09.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-34.avif">
+          <source srcset="./Photos/Dance/webps/dance-34.webp">
+          <img src="./Photos/Dance/jpgs/dance-34.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-10.avif">
+          <source srcset="./Photos/Dance/webps/dance-10.webp">
+          <img src="./Photos/Dance/jpgs/dance-10.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-20.avif">
+          <source srcset="./Photos/Dance/webps/dance-20.webp">
+          <img src="./Photos/Dance/jpgs/dance-20.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-39.avif">
+          <source srcset="./Photos/Dance/webps/dance-39.webp">
+          <img src="./Photos/Dance/jpgs/dance-39.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-35.avif">
+          <source srcset="./Photos/Dance/webps/dance-35.webp">
+          <img src="./Photos/Dance/jpgs/dance-35.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-06.avif">
+          <source srcset="./Photos/Dance/webps/dance-06.webp">
+          <img src="./Photos/Dance/jpgs/dance-06.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-27.avif">
+          <source srcset="./Photos/Dance/webps/dance-27.webp">
+          <img src="./Photos/Dance/jpgs/dance-27.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-04.avif">
+          <source srcset="./Photos/Dance/webps/dance-04.webp">
+          <img src="./Photos/Dance/jpgs/dance-04.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-19.avif">
+          <source srcset="./Photos/Dance/webps/dance-19.webp">
+          <img src="./Photos/Dance/jpgs/dance-19.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-32.avif">
+          <source srcset="./Photos/Dance/webps/dance-32.webp">
+          <img src="./Photos/Dance/jpgs/dance-32.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-52.avif">
+          <source srcset="./Photos/Dance/webps/dance-52.webp">
+          <img src="./Photos/Dance/jpgs/dance-52.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-13.avif">
+          <source srcset="./Photos/Dance/webps/dance-13.webp">
+          <img src="./Photos/Dance/jpgs/dance-13.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-22.avif">
+          <source srcset="./Photos/Dance/webps/dance-22.webp">
+          <img src="./Photos/Dance/jpgs/dance-22.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-08.avif">
+          <source srcset="./Photos/Dance/webps/dance-08.webp">
+          <img src="./Photos/Dance/jpgs/dance-08.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-12.avif">
+          <source srcset="./Photos/Dance/webps/dance-12.webp">
+          <img src="./Photos/Dance/jpgs/dance-12.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-42.avif">
+          <source srcset="./Photos/Dance/webps/dance-42.webp">
+          <img src="./Photos/Dance/jpgs/dance-42.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-31.avif">
+          <source srcset="./Photos/Dance/webps/dance-31.webp">
+          <img src="./Photos/Dance/jpgs/dance-31.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-02.avif">
+          <source srcset="./Photos/Dance/webps/dance-02.webp">
+          <img src="./Photos/Dance/jpgs/dance-02.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-03.avif">
+          <source srcset="./Photos/Dance/webps/dance-03.webp">
+          <img src="./Photos/Dance/jpgs/dance-03.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-05.avif">
+          <source srcset="./Photos/Dance/webps/dance-05.webp">
+          <img src="./Photos/Dance/jpgs/dance-05.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-17.avif">
+          <source srcset="./Photos/Dance/webps/dance-17.webp">
+          <img src="./Photos/Dance/jpgs/dance-17.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-15.avif">
+          <source srcset="./Photos/Dance/webps/dance-15.webp">
+          <img src="./Photos/Dance/jpgs/dance-15.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-54.avif">
+          <source srcset="./Photos/Dance/webps/dance-54.webp">
+          <img src="./Photos/Dance/jpgs/dance-54.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-59.avif">
+          <source srcset="./Photos/Dance/webps/dance-59.webp">
+          <img src="./Photos/Dance/jpgs/dance-59.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-18.avif">
+          <source srcset="./Photos/Dance/webps/dance-18.webp">
+          <img src="./Photos/Dance/jpgs/dance-18.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-33.avif">
+          <source srcset="./Photos/Dance/webps/dance-33.webp">
+          <img src="./Photos/Dance/jpgs/dance-33.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-45.avif">
+          <source srcset="./Photos/Dance/webps/dance-45.webp">
+          <img src="./Photos/Dance/jpgs/dance-45.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-61.avif">
+          <source srcset="./Photos/Dance/webps/dance-61.webp">
+          <img src="./Photos/Dance/jpgs/dance-61.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-57.avif">
+          <source srcset="./Photos/Dance/webps/dance-57.webp">
+          <img src="./Photos/Dance/jpgs/dance-57.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-49.avif">
+          <source srcset="./Photos/Dance/webps/dance-49.webp">
+          <img src="./Photos/Dance/jpgs/dance-49.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/CAP7048.avif">
+          <source srcset="./Photos/Dance/webps/CAP7048.webp">
+          <img src="./Photos/Dance/jpgs/CAP7048.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-29.avif">
+          <source srcset="./Photos/Dance/webps/dance-29.webp">
+          <img src="./Photos/Dance/jpgs/dance-29.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-55.avif">
+          <source srcset="./Photos/Dance/webps/dance-55.webp">
+          <img src="./Photos/Dance/jpgs/dance-55.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-26.avif">
+          <source srcset="./Photos/Dance/webps/dance-26.webp">
+          <img src="./Photos/Dance/jpgs/dance-26.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-43.avif">
+          <source srcset="./Photos/Dance/webps/dance-43.webp">
+          <img src="./Photos/Dance/jpgs/dance-43.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-44.avif">
+          <source srcset="./Photos/Dance/webps/dance-44.webp">
+          <img src="./Photos/Dance/jpgs/dance-44.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-37.avif">
+          <source srcset="./Photos/Dance/webps/dance-37.webp">
+          <img src="./Photos/Dance/jpgs/dance-37.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-30.avif">
+          <source srcset="./Photos/Dance/webps/dance-30.webp">
+          <img src="./Photos/Dance/jpgs/dance-30.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-41.avif">
+          <source srcset="./Photos/Dance/webps/dance-41.webp">
+          <img src="./Photos/Dance/jpgs/dance-41.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-36.avif">
+          <source srcset="./Photos/Dance/webps/dance-36.webp">
+          <img src="./Photos/Dance/jpgs/dance-36.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-21.avif">
+          <source srcset="./Photos/Dance/webps/dance-21.webp">
+          <img src="./Photos/Dance/jpgs/dance-21.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Dance/avifs/dance-60.avif">
+          <source srcset="./Photos/Dance/webps/dance-60.webp">
+          <img src="./Photos/Dance/jpgs/dance-60.jpg" alt="">
+        </picture>
+      </div>
+</div>
+</div>
+<div class="gallery-section" id="theater">
+<h2>Theater</h2>
+<div class="gallery-grid">
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-08.avif">
+          <source srcset="./Photos/Theater/webps/theater-08.webp">
+          <img src="./Photos/Theater/jpgs/theater-08.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-25.avif">
+          <source srcset="./Photos/Theater/webps/theater-25.webp">
+          <img src="./Photos/Theater/jpgs/theater-25.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-14.avif">
+          <source srcset="./Photos/Theater/webps/theater-14.webp">
+          <img src="./Photos/Theater/jpgs/theater-14.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-05.avif">
+          <source srcset="./Photos/Theater/webps/theater-05.webp">
+          <img src="./Photos/Theater/jpgs/theater-05.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-18.avif">
+          <source srcset="./Photos/Theater/webps/theater-18.webp">
+          <img src="./Photos/Theater/jpgs/theater-18.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-03.avif">
+          <source srcset="./Photos/Theater/webps/theater-03.webp">
+          <img src="./Photos/Theater/jpgs/theater-03.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-19.avif">
+          <source srcset="./Photos/Theater/webps/theater-19.webp">
+          <img src="./Photos/Theater/jpgs/theater-19.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-17.avif">
+          <source srcset="./Photos/Theater/webps/theater-17.webp">
+          <img src="./Photos/Theater/jpgs/theater-17.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-24.avif">
+          <source srcset="./Photos/Theater/webps/theater-24.webp">
+          <img src="./Photos/Theater/jpgs/theater-24.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-23.avif">
+          <source srcset="./Photos/Theater/webps/theater-23.webp">
+          <img src="./Photos/Theater/jpgs/theater-23.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-02.avif">
+          <source srcset="./Photos/Theater/webps/theater-02.webp">
+          <img src="./Photos/Theater/jpgs/theater-02.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-11.avif">
+          <source srcset="./Photos/Theater/webps/theater-11.webp">
+          <img src="./Photos/Theater/jpgs/theater-11.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-22.avif">
+          <source srcset="./Photos/Theater/webps/theater-22.webp">
+          <img src="./Photos/Theater/jpgs/theater-22.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-20.avif">
+          <source srcset="./Photos/Theater/webps/theater-20.webp">
+          <img src="./Photos/Theater/jpgs/theater-20.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-01.avif">
+          <source srcset="./Photos/Theater/webps/theater-01.webp">
+          <img src="./Photos/Theater/jpgs/theater-01.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-21.avif">
+          <source srcset="./Photos/Theater/webps/theater-21.webp">
+          <img src="./Photos/Theater/jpgs/theater-21.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-09.avif">
+          <source srcset="./Photos/Theater/webps/theater-09.webp">
+          <img src="./Photos/Theater/jpgs/theater-09.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-13.avif">
+          <source srcset="./Photos/Theater/webps/theater-13.webp">
+          <img src="./Photos/Theater/jpgs/theater-13.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-15.avif">
+          <source srcset="./Photos/Theater/webps/theater-15.webp">
+          <img src="./Photos/Theater/jpgs/theater-15.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-10.avif">
+          <source srcset="./Photos/Theater/webps/theater-10.webp">
+          <img src="./Photos/Theater/jpgs/theater-10.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-06.avif">
+          <source srcset="./Photos/Theater/webps/theater-06.webp">
+          <img src="./Photos/Theater/jpgs/theater-06.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-12.avif">
+          <source srcset="./Photos/Theater/webps/theater-12.webp">
+          <img src="./Photos/Theater/jpgs/theater-12.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-04.avif">
+          <source srcset="./Photos/Theater/webps/theater-04.webp">
+          <img src="./Photos/Theater/jpgs/theater-04.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-07.avif">
+          <source srcset="./Photos/Theater/webps/theater-07.webp">
+          <img src="./Photos/Theater/jpgs/theater-07.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Theater/avifs/theater-16.avif">
+          <source srcset="./Photos/Theater/webps/theater-16.webp">
+          <img src="./Photos/Theater/jpgs/theater-16.jpg" alt="">
+        </picture>
+      </div>
+</div>
+</div>
+<div class="gallery-section" id="misc">
+<h2>Misc</h2>
+<div class="gallery-grid">
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-11.avif">
+          <source srcset="./Photos/Misc/webps/misc-11.webp">
+          <img src="./Photos/Misc/jpgs/misc-11.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-16.avif">
+          <source srcset="./Photos/Misc/webps/misc-16.webp">
+          <img src="./Photos/Misc/jpgs/misc-16.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-14.avif">
+          <source srcset="./Photos/Misc/webps/misc-14.webp">
+          <img src="./Photos/Misc/jpgs/misc-14.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-1.avif">
+          <source srcset="./Photos/Misc/webps/misc-1.webp">
+          <img src="./Photos/Misc/jpgs/misc-1.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-20.avif">
+          <source srcset="./Photos/Misc/webps/misc-20.webp">
+          <img src="./Photos/Misc/jpgs/misc-20.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-17.avif">
+          <source srcset="./Photos/Misc/webps/misc-17.webp">
+          <img src="./Photos/Misc/jpgs/misc-17.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-09.avif">
+          <source srcset="./Photos/Misc/webps/misc-09.webp">
+          <img src="./Photos/Misc/jpgs/misc-09.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-18.avif">
+          <source srcset="./Photos/Misc/webps/misc-18.webp">
+          <img src="./Photos/Misc/jpgs/misc-18.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-15.avif">
+          <source srcset="./Photos/Misc/webps/misc-15.webp">
+          <img src="./Photos/Misc/jpgs/misc-15.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-2.avif">
+          <source srcset="./Photos/Misc/webps/misc-2.webp">
+          <img src="./Photos/Misc/jpgs/misc-2.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-06.avif">
+          <source srcset="./Photos/Misc/webps/misc-06.webp">
+          <img src="./Photos/Misc/jpgs/misc-06.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-13.avif">
+          <source srcset="./Photos/Misc/webps/misc-13.webp">
+          <img src="./Photos/Misc/jpgs/misc-13.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-19.avif">
+          <source srcset="./Photos/Misc/webps/misc-19.webp">
+          <img src="./Photos/Misc/jpgs/misc-19.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-05.avif">
+          <source srcset="./Photos/Misc/webps/misc-05.webp">
+          <img src="./Photos/Misc/jpgs/misc-05.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-08.avif">
+          <source srcset="./Photos/Misc/webps/misc-08.webp">
+          <img src="./Photos/Misc/jpgs/misc-08.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-07.avif">
+          <source srcset="./Photos/Misc/webps/misc-07.webp">
+          <img src="./Photos/Misc/jpgs/misc-07.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-3.avif">
+          <source srcset="./Photos/Misc/webps/misc-3.webp">
+          <img src="./Photos/Misc/jpgs/misc-3.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-10.avif">
+          <source srcset="./Photos/Misc/webps/misc-10.webp">
+          <img src="./Photos/Misc/jpgs/misc-10.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Misc/avifs/misc-12.avif">
+          <source srcset="./Photos/Misc/webps/misc-12.webp">
+          <img src="./Photos/Misc/jpgs/misc-12.jpg" alt="">
+        </picture>
+      </div>
+</div>
+</div>
+<div class="gallery-section" id="promotional">
+<h2>Promotional</h2>
+<div class="gallery-grid">
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Promotional/avifs/1.avif">
+          <source srcset="./Photos/Promotional/webps/1.webp">
+          <img src="./Photos/Promotional/jpgs/1.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Promotional/avifs/3.avif">
+          <source srcset="./Photos/Promotional/webps/3.webp">
+          <img src="./Photos/Promotional/jpgs/3.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Promotional/avifs/ftf2.avif">
+          <source srcset="./Photos/Promotional/webps/ftf2.webp">
+          <img src="./Photos/Promotional/jpgs/ftf2.jpg" alt="">
+        </picture>
+      </div>
+      <div class="fade-in">
+        <picture>
+          <source srcset="./Photos/Promotional/avifs/2.avif">
+          <source srcset="./Photos/Promotional/webps/2.webp">
+          <img src="./Photos/Promotional/jpgs/2.jpg" alt="">
+        </picture>
+      </div>
+</div>
+</div>
+
+</body>
+</html>
