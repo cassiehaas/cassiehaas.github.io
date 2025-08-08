@@ -147,6 +147,7 @@ h1 {
 
 .slideshow,
 .theater-slides,
+.portraits-slides,
 #dance-slides {
   border: 3px solid black;
   border-radius: 0.5em; /* optional: softens corners */

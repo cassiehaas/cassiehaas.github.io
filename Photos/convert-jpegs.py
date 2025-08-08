@@ -4,10 +4,10 @@ from collections import deque
 from multiprocessing import Process
 import os
 
-import pillow_avif # pillow-avif-plugin for AVIF files
+# import pillow_avif # pillow-avif-plugin for AVIF files
 
 # Define base directory
-directory = "Misc"
+directory = "Portraits"
 base_dir = os.path.abspath(directory)  # Makes paths absolute
 
 # Define subdirectories
@@ -30,7 +30,7 @@ for filename in os.listdir(input_dir):
 
     image = Image.open(input_path)
     origsize = image.size
-    newsize = (origsize[0] // 2, origsize[1] // 2)
+    newsize = (origsize[0], origsize[1]) # commented out size change for already small files
     
     newimage = image.resize(newsize)
     newimage.save(output_path)

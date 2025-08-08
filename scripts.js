@@ -22,6 +22,17 @@ let theater_flkty = new Flickity('.theater-slides', {
   freeScroll: true,
 });
 
+let portraits_flkty = new Flickity('.portraits-slides', {
+  // options
+  cellAlign: 'center',
+  contain: true,
+  wrapAround: true,
+  autoPlay: 3000,
+  pageDots: false,
+  imagesLoaded: true,
+  freeScroll: true,
+});
+
 let dance_flkty = new Flickity('#dance-slides', {
   // options
   cellAlign: 'center',
